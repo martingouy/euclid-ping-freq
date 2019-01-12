@@ -16,7 +16,7 @@ from logging.handlers import RotatingFileHandler
 
 NAME = 'probemon'
 DESCRIPTION = "a command line tool for logging 802.11 probe request frames"
-FILTERED_MAC = "f6:2f:ee:2c:c9:6c"
+FILTERED_MAC = "44:91:60:a7:5b:16"
 DEBUG = False
 ap_id = "f6:2f:ee:2c:c9:6c"
 
