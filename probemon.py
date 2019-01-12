@@ -45,6 +45,7 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi, fm)
         # append the mac address itself
         if fm is not None and fm.lower() != packet.addr2.lower():
             return
+
         fields.append(packet.addr2)
 
         # parse mac address and look up the organization from the vendor octets
