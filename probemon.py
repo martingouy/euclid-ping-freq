@@ -24,8 +24,8 @@ ap_id = "f6:2f:ee:2c:c9:6c"
 def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi, fm):
     def packet_callback(packet):
 
-        if not packet.haslayer(Dot11):
-            return
+        # if not packet.haslayer(Dot11):
+            # return
 
         # we are looking for management frames with a probe subtype
         # if neither match we are done here
