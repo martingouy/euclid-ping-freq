@@ -21,7 +21,7 @@ DEBUG = False
 ap_id = "f6:2f:ee:2c:c9:6c"
 
 
-def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi, fm, u):
+def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi, fm):
     def packet_callback(packet):
 
         if not packet.haslayer(Dot11):
@@ -64,7 +64,7 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi, fm,
             fields.append(str(rssi_val))
 
         fields = [f.decode('cp1252').encode('utf-8') for f in fields]
-        # logger.info(delimiter.join(fields))
+        logger.info(delimiter.join(fields))
 
         # if fm is not None and u and ssid and rssi:
         #     send_endpoint(fields[0], ap_id, fields[1].lower(), fields[3], fields[2])
